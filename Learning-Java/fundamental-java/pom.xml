@@ -4,11 +4,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>system.hamming</groupId>
     <artifactId>fundamental-java</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>fundamental-java</name>
-    <url>http://maven.apache.org</url>
 
     <parent>
         <groupId>system.hamming</groupId>

@@ -10,11 +10,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>system.hamming</groupId>
     <artifactId>java8-feature</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>java8-feature</name>
-    <url>http://maven.apache.org</url>
 
     <dependencies>
         <dependency>
