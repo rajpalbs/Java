@@ -13,6 +13,7 @@
     <modules>
         <module>java8-feature</module>
         <module>fundamental-java</module>
+        <module>book-modern-java-in-action</module>
     </modules>
 
     <properties>
@@ -30,4 +31,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 </project>

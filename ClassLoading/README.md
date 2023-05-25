@@ -6,7 +6,7 @@ foo@bar:~/.../1_Basic_Class_Loading/Version1$ javac -d classes src/com/hamming/M
 ```
 Here our `Main.java` class present under directory src/com/hamming where directory com & hamming are part of java package so whenever `Main.java` compiles it will create directory com & hamming at destination directory. i.e. `classes` directory in our case. 
 
-- Command for execute java.
+- Command for execute `Main`.
 ```console
 foo@bar:~/.../1_Basic_Class_Loading/Version1$ java -cp classes com.hamming.Main
 ```
@@ -21,7 +21,7 @@ foo@bar:~/.../1_Basic_Class_Loading/Version2$ javac -d classes src/com/hamming/M
 
     `.class` file generated at appropriate package under `classes` directory.
 
-- Below is command for running `Main` class which is havind dependency of other class.
+- Below is command for running `Main` class which is having dependency of other class.
 ```console
 foo@bar:~/.../1_Basic_Class_Loading/Version2$ java -cp classes com.hamming.Main
 ```
