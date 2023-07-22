@@ -1,0 +1,1 @@
+- Behaviour parameterization means implementing strategy pattern.
