@@ -3,23 +3,37 @@ package system.hamming.chapter3.executearoundpattern;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.function.Function;
+
+import static system.hamming.Main.printStringOnConsole;
 
 public class BufferedReaderFileLineReaderProcessorTest {
-    public static void main(String[] args) throws IOException{
-        BufferedReaderFileLineReaderProcessor singleLineProcessor = (BufferedReader b) -> b.readLine(); // lambda expression assigned to functional interface
 
-        String line1 = processFile(singleLineProcessor);
-        System.out.println("Printing first line --> " + line1);
+    public static void main() throws IOException {
+
+        BufferedReaderFileLineReaderProcessor singleLineProcessor = BufferedReader::readLine; // lambda expression assigned to functional interface
+
+        //reading & printing line using lambda
+        printStringOnConsole.accept(singleLineProcessor.readLines(new BufferedReader(new FileReader("./pom.xml"))));
+
+        //reading & printing line using execute around pattern
+        processFile(singleLineProcessor); // Here benefit is, Do not write code common code everytime i.e. creating BufferedReader object,
 
         BufferedReaderFileLineReaderProcessor fiveLineProcessor = (BufferedReader b) -> b.readLine() + b.readLine() + b.readLine() + b.readLine() + b.readLine(); // lambda expression assigned to functional interface
-        String firstFiveLines = processFile(fiveLineProcessor);
-        System.out.println("Printing first 5 lines --> " + firstFiveLines);
+        processFile(fiveLineProcessor);
     }
 
-    private static String processFile(BufferedReaderFileLineReaderProcessor processor) throws IOException {
+    private static void processFile(BufferedReaderFileLineReaderProcessor processor) throws IOException { // Behaviour parameterization
         try (BufferedReader currentFile = new BufferedReader(new FileReader("./pom.xml"))) {
-            System.out.println(processor);
-            return processor.readLine(currentFile);
+            printStringOnConsole.accept(processor.readLines(currentFile));
         }
+    }
+
+    private static void processFile(Function<BufferedReader, String> fn) throws Exception {
+        printStringOnConsole.accept(fn.apply(new BufferedReader(new FileReader("./pom.xml"))));
+    }
+
+    public static void main(String[] args) throws IOException {
+        main();
     }
 }

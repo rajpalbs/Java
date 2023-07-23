@@ -1,6 +1,10 @@
 package system.hamming;
 
+import java.util.function.Consumer;
+
 public class Main {
+
+    public static final Consumer<String> printStringOnConsole = System.out::println;
 
     public static final String RESET = "\033[0m";
     public static final String GREEN = "\033[0;32m";
@@ -12,7 +16,7 @@ public class Main {
     public static final String BLUE_BOLD = "\033[1;34m";
     public static final String PURPLE_BOLD = "\033[1;35m";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         system.hamming.chapter1.Main.main();
         system.hamming.chapter2.Main.main();
         system.hamming.chapter3.Main.main();

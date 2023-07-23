@@ -7,7 +7,7 @@ import java.io.IOException;
 public interface BufferedReaderFileLineReaderProcessor {
     /*
      * Here readLine is an only abstract method which accept object of type BufferedReader and return String object.
-     * So we can write lambda expression in which any method of BufferedReader class which returns String can be called.
+     * So we can write lambda expression in which argument is type of BufferedReader class and return String class can be called.
      * */
-    String readLine(BufferedReader bufferedReader) throws IOException;
+    String readLines(BufferedReader bufferedReader) throws IOException;
 }
