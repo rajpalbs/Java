@@ -14,7 +14,7 @@ public class Main {
 
     public static final Consumer<String> printStringOnConsole = System.out::println;
 
-    public static void main() {
+    private static void execute() {
         printStringOnConsole.accept(GREEN);
 
         printStringOnConsole.accept("=== Chapter-1 Main execution started ===\n");
@@ -63,6 +63,6 @@ public class Main {
     }
 
     public static void main(String... args) {
-        main();
+        execute();
     }
 }
