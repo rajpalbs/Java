@@ -33,7 +33,7 @@
 # TODO
 
 - Explore Z GC.
-- 
+- Explore `java -XX:+PrintFlagsFinal -version`, Sample file is attached in resources directory. 
 
 # References
 - <a href="https://docs.oracle.com/en/java/javase/17/gctuning/available-collectors.html#GUID-F215A508-9E58-40B4-90A5-74E29BF3BD3C" target="_blank">Available garbage collector</a>
