@@ -1,4 +1,4 @@
-#### JRE & JDK
+# JRE & JDK
 
 - JRE (Java Runtime Environment)
   - Provides a runtime environment to execute JAVA based application.
@@ -8,7 +8,7 @@
 - JDK(Java Development Kit)
     - Development tool for JAVA SE application. along with other tool like Java Compiler, JConsole
 ---
-#### JVM Component
+# JVM Component
 ![](./images/jvm_component.png)
 - JVM Runtime : Provide runtime environment
   - It performs responsibility like, Start/Stop VM, Class loading,Command line argument parsing, Error/Exception handling, Java bytecode interpreter, thread management, synchronization, handle java native interface.
@@ -23,6 +23,6 @@
 - JIT compiler : Take java **bytecode and generate native assembly instruction**.
 
 ---
-### TODO
+# TODO
 
 - Generational garbage collector.
