@@ -18,11 +18,22 @@
   - JVM(Memory manager/Garbage collector) move longer lived object from **young generation to old generation.**
   - There is also a third generation called **permanent generation, which holds metadata such as class data structure. Object from Old generation never migrated into permanent generation.**
   - From java 8, **Permanent generation is eliminated in favor of space or region referred as metaspace.**
-  - Garbage collector/ Memory manager which works in fashion of creating region(memory space) based on object generation are called as **generational garbage collector**.  
+  - Garbage collector/ Memory manager which works in fashion of creating region(memory space) based on object generation are called as **generational garbage collector**.
+  - Available garbage collector are:
+    - Serial GC : It is a single threaded stop the world young generation collector, and a single threaded stop the world old generation collector.
+    - Throughput GC (Parallel GC) : It is a multithreaded stop the world young generation collector, and a multithreaded stop the world old generation collector.
+    - Garbage-First (G1) : It is a multithreaded stop the world young generation collector, and a multithreaded stop the world old generation collector.
+    - Z Garbage Collector(Z GC) : its multithreaded low-latency  
   <br>
 - JIT compiler : Take java **bytecode and generate native assembly instruction**.
+  - Prior to JAVA 8, there are, Client JVM - designed for rapid application startup. And Server JVM - for highly optimized, and generate high performing code with cost of slow application start up.
+  - From JAVA 8, There is Tiered one - which behave like client JVM and continue to optimize the generated code until it reach to level of server JVM.
 
 ---
 # TODO
 
-- Generational garbage collector.
+- Explore Z GC.
+- 
+
+# References
+- <a href="https://docs.oracle.com/en/java/javase/17/gctuning/available-collectors.html#GUID-F215A508-9E58-40B4-90A5-74E29BF3BD3C" target="_blank">Available garbage collector</a>
