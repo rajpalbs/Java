@@ -29,6 +29,20 @@
   - Prior to JAVA 8, there are, Client JVM - designed for rapid application startup. And Server JVM - for highly optimized, and generate high performing code with cost of slow application start up.
   - From JAVA 8, There is Tiered one - which behave like client JVM and continue to optimize the generated code until it reach to level of server JVM.
 
+# JVM Command-line options
+
+- For printing all the VM options global flag by which JVM is started with.
+  ```shell
+    java -XX:+PrintFlagsFinal -version
+    ```
+  Read [this](https://medium.com/codex/lets-talk-about-java-jvm-flags-23fe0f826bc2) more details about it.
+- For print GC details.
+  ```shell
+    java -XX:+PrintGCDetails -version
+    ```
+  
+
+
 ---
 # TODO
 
