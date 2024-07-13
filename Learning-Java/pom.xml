@@ -13,6 +13,7 @@
     <modules>
         <module>fundamental-java</module>
         <module>book-modern-java-in-action</module>
+        <module>Thread</module>
     </modules>
 
     <properties>

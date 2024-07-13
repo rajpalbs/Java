@@ -1,7 +1,9 @@
 # OOPS
 
 - **Abstraction** - Is hiding complexities of implementation and exposing simpler interfaces. Like Car, car provide us a
-  simple interface to drive it without bothering about inner details.
+  simple interface to drive it without bothering about inner details. it gives general perception about the functional
+  offering instead of how it is offering. Like mobile phone given (WHAT) offering of Calling,SMS,Power storage,User
+  Interface. **Represents “WHAT” part operation instead of “HOW”**.
 - **Encapsulation** - is hiding the state or internal representation of an object from the consumer of an API. Like
   car's accelerator hides the information of speed up/down.
 - Abstraction is general level of information hiding but Encapsulation is special level of information hiding.
